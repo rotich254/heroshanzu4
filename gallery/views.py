@@ -5,6 +5,7 @@ from gallery.models import Image
 from django.core.mail import EmailMessage
 from django.contrib import messages
 from django.shortcuts import redirect
+from django.urls import reverse
 
 def index(request):
     
@@ -25,7 +26,7 @@ def index(request):
         
         emailmessage.send()
         messages.success(request, 'Email Has Been Sent')
-        return redirect('index')
+        return redirect(reverse('index') + '#contact')
     
     else:
         return render(request, 'gallery/index.html')
