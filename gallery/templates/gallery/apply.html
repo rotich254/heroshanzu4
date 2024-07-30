@@ -1,0 +1,109 @@
+{% extends 'gallery/index.html' %}
+{% load static %}
+
+{% block active-nav %}
+<li><a class="nav-link scrollto " href="{% url 'index' %}">Home</a></li>
+{% endblock %}
+
+{% block application %}
+
+
+<section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active" style="background-image: url(static/img/media/image42.png)">
+          <div class="container" style="background-color:rgba(255, 255, 255, 0.449)">
+            <h1 style="color: black; font-size:xx-large;font-weight:900;margin-top:0">APPLY FOR ENROLLMENT</h1>         
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="application">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Make An Application</h2>
+    </div>
+
+    <h2>Admission Enquiry</h2>
+    <p>Fill the form below.</p>
+
+    <form class="application-form">
+      <div class="form-group2">
+        <label for="student-name">Current School</label>
+        <input type="text" id="student-name" name="student-name" required>
+      </div>
+      <div class="form-group2">
+        <label for="parent-address">Where did you hear about us</label>
+        <textarea id="parent-address" name="parent-address" rows="4" required></textarea>
+      </div>
+
+    </form>
+
+
+    <form class="application-form">
+      <div class="form-row">
+        <div class="form-column">
+          <h3>Student Information</h3>
+          <div class="form-group2">
+            <label for="student-name">First Name</label>
+            <input type="text" id="student-name" name="student-name" required>
+          </div>
+          <div class="form-group2">
+            <label for="student-name">Middle Name</label>
+            <input type="text" id="student-name" name="student-name" required>
+          </div>
+          <div class="form-group2">
+            <label for="student-name">Surname</label>
+            <input type="text" id="student-name" name="student-name" required>
+          </div>
+          <div class="form-group2">
+            <label for="date-of-birth">Date Of Birth</label>
+            <input type="date" id="date-of-birth" name="date-of-birth" required>
+          </div>
+          <div class="form-group2">
+            <label for="student-grade">Grade</label>
+            <input type="text" id="student-grade" name="student-grade" required>
+          </div>
+        </div>
+    
+        <div class="form-column">
+          <h3>Parent Information</h3>
+          <div class="form-group2">
+            <label for="parent-name">Name</label>
+            <input type="text" id="parent-name" name="parent-name" required>
+          </div>
+          <div class="form-group2">
+            <label for="parent-email">Email</label>
+            <input type="email" id="parent-email" name="parent-email" required>
+          </div>
+          <div class="form-group2">
+            <label for="parent-phone">Phone</label>
+            <input type="tel" id="parent-phone" name="parent-phone" required>
+          </div>
+          <div class="form-group2">
+            <label for="parent-relation">Relation To Student</label>
+            <select id="parent-relation" name="parent-relation" required>
+              <option value="mother">Parent</option>
+              <option value="guardian">Guardian</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group2">
+            <label for="parent-address">Address</label>
+            <textarea id="parent-address" name="parent-address" rows="1" required></textarea>
+          </div>
+        </div>
+      </div>
+    
+      <button type="submit">Submit Application</button>
+    </form>
+    
+
+  </div>
+
+</section>
+
+{% endblock %}
