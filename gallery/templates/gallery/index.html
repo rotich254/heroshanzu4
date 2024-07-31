@@ -72,7 +72,7 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="#" class="appointment-btn scrollto" style="background-color:#587666"><span class="d-none d-md-inline">Make a</span> Donation</a>
+      <a href="#pricing" class="appointment-btn scrollto" style="background-color:#587666"><span class="d-none d-md-inline">Make a</span> Donation</a>
 
     </div>
   </header><!-- End Header -->
@@ -929,6 +929,18 @@
   </main><!-- End #main -->
 {% endblock %}
 
+{% if messages %}
+<div class="text-center text-uppercase">
+  {% for message in messages %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  {% endfor %}
+</div>
+{% endif %}
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="footer-top">
@@ -980,7 +992,8 @@
             <h4>Our Newsletter</h4>
             <p>Subscribe to our monthly newsletters</p>
             <form action="" method="post">
-              <input type="email" name="email" placeholder="Enter Email"><input type="submit" value="Subscribe">
+              {% csrf_token %}
+              <input type="email" name="subscribe_email" placeholder="Enter Email" required><input type="submit" name="subscribe" value="Subscribe">
             </form>
 
           </div>
