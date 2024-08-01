@@ -140,4 +140,17 @@
 
 </section>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const dobInput = document.getElementById('date_of_birth');
+        const today = new Date();
+        const yyyy = today.getFullYear();
+        const mm = String(today.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+        const dd = String(today.getDate()).padStart(2, '0');
+        const maxDate = `${yyyy}-${mm}-${dd}`;
+    
+        dobInput.setAttribute('max', maxDate);
+    });
+</script>
+
 {% endblock %}
