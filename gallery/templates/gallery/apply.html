@@ -20,6 +20,26 @@
     </div>
 </section>
 
+<div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
+  <div class="modal-dialog" id='success'>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="messageModalLabel">Application Status</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        {% for message in messages %}
+          <div class="alert {% if message.tags %}alert-{{ message.tags }}{% else %}alert-info{% endif %}" role="alert">
+            {{ message }}
+          </div>
+        {% endfor %}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 <section class="application">
   <div class="container">
 
@@ -27,73 +47,109 @@
       <h2>Make An Application</h2>
     </div>
 
+  
+
     <h2>Admission Enquiry</h2>
     <p>Fill the form below.</p>
 
-    <form class="application-form">
+    <form class="application-form" method="post">
+      {% csrf_token %}
       <div class="form-group2">
-        <label for="student-name">Current School</label>
-        <input type="text" id="student-name" name="student-name" required>
+        <label for="current_school">Current School</label>
+        <input type="text" id="current_school" name="current_school" required>
       </div>
       <div class="form-group2">
-        <label for="parent-address">Where did you hear about us</label>
-        <textarea id="parent-address" name="parent-address" rows="4" required></textarea>
+        <label for="about_us">Where did you hear about us</label>
+        <textarea id="about_us" name="about_us" rows="4"></textarea>
       </div>
-
-    </form>
-
-
-    <form class="application-form">
+      <br>
+      <br>
       <div class="form-row">
         <div class="form-column">
           <h3>Student Information</h3>
           <div class="form-group2">
-            <label for="student-name">First Name</label>
-            <input type="text" id="student-name" name="student-name" required>
+            <label for="nemis">Nemis</label>
+            <input type="number" id="nemis" name="nemis" required>
           </div>
           <div class="form-group2">
-            <label for="student-name">Middle Name</label>
-            <input type="text" id="student-name" name="student-name" required>
+            <div class="row">
+              <div class="col-md-6"> 
+                <label for="name">First Name</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="col-md-6">
+                <label for="middle_name">Middle Name</label>
+                <input type="text" id="middle_name" name="middle_name" required>
+              </div>
+            </div>        
           </div>
+
           <div class="form-group2">
-            <label for="student-name">Surname</label>
-            <input type="text" id="student-name" name="student-name" required>
+            <label for="surname">Surname</label>
+            <input type="text" id="surname" name="surname" required>
           </div>
+
           <div class="form-group2">
-            <label for="date-of-birth">Date Of Birth</label>
-            <input type="date" id="date-of-birth" name="date-of-birth" required>
+            <div class="row">
+              <div class="col-md-6">
+                <label for="date_of_birth">Date Of Birth</label>
+                <input type="date" id="date_of_birth" name="date_of_birth" required>
+              </div>
+              <div class="col-md-6">
+                <label for="gender">Gender</label>
+                <select name="gender" id="gender" required>
+                  <option value="" disabled selected>Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+            </div>           
           </div>
+
           <div class="form-group2">
-            <label for="student-grade">Grade</label>
-            <input type="text" id="student-grade" name="student-grade" required>
+            <label for="grade_level">Grade Level</label>
+            <select name="grade_level"  id="grade_level" required>
+              <option value="" disabled selected>Grade Level</option>
+              <option value="pp1">Pre Pimary 1</option>
+              <option value="pp2">Pre Pimary 2</option>
+              <option value="grade1">Grade 1</option>
+              <option value="grade2">Grade 2</option>
+              <option value="grade3">Grade 3</option>
+              <option value="grade4">Grade 4</option>
+              <option value="grade5">Grade 5</option>
+              <option value="grade6">Grade 6</option>
+              <option value="grade7">Grade 7</option>
+              <option value="grade8">Grade 8</option>
+              <option value="grade9">Grade 9</option>
+            </select>
           </div>
         </div>
     
         <div class="form-column">
           <h3>Parent Information</h3>
           <div class="form-group2">
-            <label for="parent-name">Name</label>
-            <input type="text" id="parent-name" name="parent-name" required>
+            <label for="parent_name">Name</label>
+            <input type="text" id="parent_name" name="parent_name" required>
           </div>
           <div class="form-group2">
-            <label for="parent-email">Email</label>
-            <input type="email" id="parent-email" name="parent-email" required>
+            <label for="parent_email">Email</label>
+            <input type="email" id="parent_email" name="parent_email" required>
           </div>
           <div class="form-group2">
-            <label for="parent-phone">Phone</label>
-            <input type="tel" id="parent-phone" name="parent-phone" required>
+            <label for="parent_phone">Phone Number</label>
+            <input type="tel" id="parent_phone" name="parent_phone" required>
           </div>
           <div class="form-group2">
-            <label for="parent-relation">Relation To Student</label>
-            <select id="parent-relation" name="parent-relation" required>
-              <option value="mother">Parent</option>
+            <label for="parent_relation">Relation To Student</label>
+            <select id="parent_relation" name="parent_relation" required>
+              <option value="parent">Parent</option>
               <option value="guardian">Guardian</option>
               <option value="other">Other</option>
             </select>
           </div>
           <div class="form-group2">
-            <label for="parent-address">Address</label>
-            <textarea id="parent-address" name="parent-address" rows="1" required></textarea>
+            <label for="parent_residence">Residence</label>
+            <input id="parent_residence" name="parent_residence" required>
           </div>
         </div>
       </div>
@@ -105,5 +161,34 @@
   </div>
 
 </section>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const dobInput = document.getElementById('date_of_birth');
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth() + 1).padStart(2, '0'); 
+    const dd = String(today.getDate()).padStart(2, '0');
+    
+    const maxDate = `${yyyy}-${mm}-${dd}`;
+    const minDate = '2009-01-01';
+    
+    dobInput.setAttribute('max', maxDate);
+    dobInput.setAttribute('min', minDate);
+  
+    const formatDateForDisplay = (dateStr) => {
+      const [year, month, day] = dateStr.split('-');
+      return `${day}/${month}/${year}`;
+    };
+
+    const messages = document.querySelectorAll('.alert');
+      if (messages.length > 0) {
+        const messageModal = new bootstrap.Modal(document.getElementById('messageModal'));
+        messageModal.show();
+      }
+    });
+</script>
 
 {% endblock %}
