@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'gallery',
     
+    'django_daraja',
 ]
 
 MIDDLEWARE = [
@@ -152,3 +153,11 @@ MESSAGE_TAGS = {
     messages.WARNING: 'warning',
     messages.ERROR: 'danger',
 }
+
+PAYPAL_CLIENT_ID=config('PAYPAL_CLIENT_ID')
+
+MPESA_CONSUMER_KEY=config('MPESA_CONSUMER_KEY')
+MPESA_CONSUMER_SECRET=config('MPESA_CONSUMER_SECRET')
+MPESA_EXPRESS_SHORTCODE=config('MPESA_EXPRESS_SHORTCODE')
+MPESA_PASSKEY=config('MPESA_PASSKEY')
+MPESA_ENVIRONMENT=config('MPESA_ENVIRONMENT')

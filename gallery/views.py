@@ -1,3 +1,6 @@
+
+from datetime import datetime
+from django.http import JsonResponse
 from django.shortcuts import render
 from firebase_admin import storage
 from datetime import timedelta
@@ -8,6 +11,11 @@ from django.shortcuts import redirect
 from django.urls import reverse
 from .models import ContactSubmission, Subscriber, Admission
 from django.conf import settings
+from django_daraja.mpesa.core import MpesaClient
+from django.views.decorators.csrf import csrf_exempt
+import json
+import logging
+
 
 def index(request):
     
@@ -70,7 +78,13 @@ def index(request):
             return redirect(reverse('index') + '#contact')
       
     else:
-        return render(request, 'gallery/index.html')
+        
+        context = {
+            'paypal_client_id': settings.PAYPAL_CLIENT_ID,
+        }
+        return render(request, 'gallery/index.html', context)
+    
+
 
 # def image_gallery(request):
 #     images = Image.objects.all()
@@ -155,3 +169,52 @@ def make_application(request):
        
     else:
         return render(request, 'gallery/apply.html')
+    
+def donation_checkout(request):
+    return render(request, 'gallery/checkout.html')
+
+logger = logging.getLogger(__name__)
+import logging
+from django.shortcuts import render
+from django_daraja.mpesa.core import MpesaClient
+from django.http import JsonResponse
+from django.urls import reverse
+
+# Set up logging
+logger = logging.getLogger(__name__)
+
+logger = logging.getLogger(__name__)
+
+@csrf_exempt
+def mpesa_payment(request):
+    if request.method == 'POST':
+        phone_number = request.POST.get('phone_number')
+        amount = request.POST.get('amount')
+        
+        try:
+            amount = int(amount)  # Convert amount to integer
+        except ValueError:
+            return JsonResponse({'error': 'Invalid amount. Please enter a valid number.'}, status=400)
+        
+        cl = MpesaClient()
+        account_reference = 'reference'
+        transaction_desc = 'Payment for services'
+        callback_url = 'https://yourdomain.com/callback'
+        
+        response = cl.stk_push(phone_number, amount, account_reference, transaction_desc, callback_url)
+        
+        logger.debug(f"STK Push Response: {response}")
+
+        if response and response.response_code == '0':  # Assuming '0' means success
+            return JsonResponse({'response': response.response_description}, safe=False)
+        else:
+            return JsonResponse({'error': 'Failed to initiate payment. Please try again.'}, status=500)
+    
+    return JsonResponse({'error': 'Invalid request method.'}, status=405)
+
+@csrf_exempt
+def mpesa_callback(request):
+    data = request.body.decode('utf-8')
+    # Process the callback data here
+    logger.debug(f"M-Pesa Callback Data: {data}")
+    return JsonResponse({"ResultCode": 0, "ResultDesc": "Accepted"})
