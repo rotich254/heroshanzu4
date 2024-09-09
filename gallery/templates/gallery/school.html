@@ -1,0 +1,267 @@
+{% extends 'gallery/index.html' %}
+{% load static %} 
+
+{% block nav %}
+<ul>
+  <li><a class="nav-link scrollto " href="{% url 'index' %}">Home</a></li>
+  <li class="dropdown"><a href="#" class="active"><span>Our School</span> <i class="bi bi-chevron-down"></i></a>
+    <ul>
+      <li><a href="">School Profile</a></li>
+      <li><a href="{% url 'school' %}">About Us</a></li>
+    </ul>
+  </li>
+  <li class="dropdown"><a href="#"><span>Academics</span> <i class="bi bi-chevron-down"></i></a>
+    <ul>
+      <li><a href="{% url 'index' %}#features">Grade Levels</a></li>
+      <li><a href="{% url 'make_application' %}">Admission</a></li>
+      <li><a href="">Programmes</a></li>
+      <li><a href="">Fee Structure</a></li>
+    </ul>         
+  </li>
+  <li><a class="nav-link scrollto" href="{% url 'staff' %}">Board & Staff</a></li>
+  <li><a href="{% url 'gallery'%}" class="nav-link scrollto">Media</a></li>
+
+  <li><a class="nav-link scrollto" href="{% url 'index' %}#contact">Contact</a></li>
+</ul>
+
+<i class="bi bi-list mobile-nav-toggle"></i>
+</nav><!-- .navbar -->
+
+<a href="#pricing" class="appointment-btn scrollto" style="background-color:#587666"><span class="d-none d-md-inline">Make a</span> Donation</a>
+
+</div>
+</header><!-- End Header -->
+{% endblock %}
+
+{% block application %}
+<section id="hero">
+  <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active" style="background-image: url({% static 'img/pic1.jpg' %})">
+        <div class="container" style="background-color:rgba(255, 255, 255, 0.449)">
+          <h1 style="color: black; font-size:xx-large;font-weight:900;margin-top:0">ABOUT OUR SCHOOL</h1>         
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main>
+  <section id="school">
+    <h1>HEROS SHANZU ACADEMY </h2>
+
+      <br><br>
+    <h3 class='h3'>SCHOOL MOTTO</h3>
+      <div class="card">
+        <div class="card-body">
+          <h2 style="text-decoration: none;" id="motto">Education is the Key to Success</h2>
+        </div>
+      </div>
+
+      <div class="container">
+        <h2 class="h3">ABOUT HEROS ACADEMY</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <p>
+              Heros School is a Mixed Nursery, Primary and Junior secondary School located in Shanzu ,Mombasa  County in the coastal city of Kenya.
+              The School started operations in 2009 with a population of 95pupils and has since grown to over 350 pupils.
+              Currently the school has 28 staffs, 13class rooms, 1 Kitchen 2 Latrines boys and 2 for girls.
+              The school is premised on the aspiration for establishing a successful and sustainable educational center that provides affordable, high quality comprehensive education services to children especially those from low income households in the community.
+              Driven by the principle of social inclusion, our approach will enable to create a conducive environment that embraces social, religious and cultural diversity while supporting every individual learner to achieve their full potential goals.
+            </p>
+          </div>
+          <div class="col-md-6">            
+            <img src="{% static 'img/heros2.png'%}" class="img-fluid" alt="">
+          </div>
+        </div>  
+
+        <div class="row">
+          <div class="col-md-6">
+            <img src="{% static 'img/image9.JPG'%}"  class="img-fluid" alt="">
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <p>
+                  We strive to offer a dynamic learning community where teachers and parents work harmoniously together in supporting students to become long life learners.
+                  As an independent and partly sponsored private school we shall always target key areas that holistically develop our students as successful and motivated learners who strive to achieve their best.
+                  We strongly believe that through building strong strategic partnerships with the local community, government, Non-governmental Organizations (NGOs) and corporate entities that cherish our vision and cause, we shall enhance our capacity to achieve this aim.
+                  We have a clear vision and purpose to be recognized as a school focusing on delivering high quality services.
+                  Our ultimate goal is to give every student the best education and equip them with skills to adapt to and flourish within a consistently changing world.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br><hr>
+
+        <div class="vision">
+          <h1>SCHOOL VISION</h1>
+          <h2 style="text-decoration: none;">
+            A community where all children have equal opportunity to access quality education services for sustainable development.
+          </h2>
+        </div>
+
+        <div class="vision">
+          <h1>SCHOOL MISSION</h1>
+          <h2 style="text-decoration: none;">
+            To blend the Kenyan curriculum with global best practice in education.
+            In our schools, we want to develop well-rounded human beings who as learners, make amazing academic progress, are ready for work in the modern world and have confidence.
+            We strive to eliminate barriers to enjoying the right to education by providing the community with a comprehensive school where all children receive the best possible education in a safe and secure environment.
+          </h2>
+        </div>
+
+
+        <div class="offers">
+          <h1>WHAT WE OFFER</h1>
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="offer">
+                <li>A curriculum that goes beyond the national requirements and will equip a child for life.</li>
+                <li>Amazing opportunities are opening up for today's young people in a fast changing, dynamic and exciting world.</li>
+                <li>Heroes A.I.C. Shanzu delivers not only on the academics (reliable, consistent, track record), but is also leading in the new world.</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <img src="{% static 'img/pic5.jpg'%}" class="img-fluid" alt="">              
+            </div>
+          </div>         
+        </div>
+        <br> <hr>
+
+        <div class="values">
+          <h1>OUR VALUES</h1>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <h4>GOD FEARING</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <h4>LOVE, CARE, COMPASSION</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <h4>EXCELLENCE</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <h4>DISCIPLINE</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <h4>RESPECT</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <h4>ENVIRONMENT CARE</h4>
+                </div>
+              </div>
+            </div>
+          </div>   
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <h4>INTEGRITY</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <h4>ACCOUNTABILITY</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <h4>TEAM WORK</h4>
+                </div>
+              </div>
+            </div>
+          </div>       
+        </div>    
+        
+        <br>
+      
+        <div class="pics">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="{% static 'img/pic10.jpg' %}"  class="img-fluid" alt="">
+              <h5>Student with a Home Science Experiment</h5>
+            </div>
+            <div class="col-md-4">
+              <img src="{% static 'img/pic8.jpg' %}"  class="img-fluid" alt="">
+              <h5>Grade 8 displaying ways of conserving soil</h5>
+            </div>
+            <div class="col-md-4">
+              <img src="{% static 'img/pic11.jpg' %}"  class="img-fluid" alt="">
+              <h5>Grade 7 Students with a Science Practical</h5>
+            </div>
+          </div>
+          
+        </div>
+        
+
+        <br>
+        <hr>
+        
+        <div class="objectives">
+          <h1>SCHOOL OBJECTIVES</h1>
+          <ul>
+            <li><i class="bi bi-check2-all"></i><span></span>To build a safe and secure school providing an exciting, inclusive curriculum this equips children with skills for lifelong learning and achieving high standards of living.</li>
+            <li><i class="bi bi-check2-all"></i><span></span>To provide equal opportunities for development for all members of the school community.</li>
+            <li><i class="bi bi-check2-all"></i><span></span>To make the school a part of the community and to develop strong and productive links with community.</li>
+            <li><i class="bi bi-check2-all"></i><span></span>To recognize and value parental rights to involvement in their children’s education through the development of close working relationships.</li>
+            <li><i class="bi bi-check2-all"></i><span></span>To prepare the children to be responsible, God-fearing citizens within the community and to give them the flexibility and skills to meet the demand of a rapidly changing society.</li>
+            <li><i class="bi bi-check2-all"></i><span></span>To enable leaners to establish social and personal relationships based on respect, understanding and cooperation.</li>
+            <li><i class="bi bi-check2-all"></i><span></span>To contribute positively to community and national development through creation of jobs for both teaching and non-teaching personnel from within and outside the community.</li>
+          </ul>
+        </div>
+
+        <div class="objectives">
+          <div class="card">
+            <div class="card-body">
+              <h1 style="color: white;">KEYS TO SUCCESS</h1>
+              <p>At Heros School we believe that the key aspects to our success will lie in; </p>
+              <ul>
+                <li><i class="bi bi-check2-all"></i><span></span>Ability to attract and retain a competent team of professional and devoted teachers.</li>
+                <li><i class="bi bi-check2-all"></i><span></span>Perception in the marketplace/stakeholders as a Center of academic excellence as well as moral and social nurture for the children at our service. </li>
+                <li><i class="bi bi-check2-all"></i><span></span>Establishing and sustain trust with our potential clients; learners and community as a private education center committed to their cause.</li>
+                <li><i class="bi bi-check2-all"></i><span></span>Creating an attractive, safe, secure and inclusive learning environment.</li>
+              </ul>   
+            </div>
+          </div>
+          
+        </div>
+
+
+      </div>
+  </section>
+</main>
+{% endblock %}
+
+{% block footer-link %}
+<li><i class="bx bx-chevron-right"></i> <a href="{% url 'index' %}#contact">Contact</a></li>
+{% endblock %}
