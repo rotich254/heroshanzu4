@@ -218,3 +218,9 @@ def mpesa_callback(request):
     # Process the callback data here
     logger.debug(f"M-Pesa Callback Data: {data}")
     return JsonResponse({"ResultCode": 0, "ResultDesc": "Accepted"})
+
+def school(request):
+    return render(request, 'gallery/school.html')
+
+def staff(request):
+    return render(request, 'gallery/staff.html')

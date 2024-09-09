@@ -1,8 +1,36 @@
 {% extends 'gallery/index.html' %}
 {% load static %}
 
-{% block active-nav %}
-<li><a class="nav-link scrollto " href="{% url 'index' %}">Home</a></li>
+{% block nav %}
+<ul>
+  <li><a class="nav-link scrollto " href="{% url 'index' %}">Home</a></li>
+  <li class="dropdown"><a href="#"><span>Our School</span> <i class="bi bi-chevron-down"></i></a>
+    <ul>
+      <li><a href="">School Profile</a></li>
+      <li><a href="{% url 'school' %}">About Us</a></li>
+    </ul>
+  </li>
+  <li class="dropdown"><a href="#"><span>Academics</span> <i class="bi bi-chevron-down"></i></a>
+    <ul>
+      <li><a href="{% url 'index' %}#features">Grade Levels</a></li>
+      <li><a href="{% url 'make_application' %}">Admission</a></li>
+      <li><a href="">Programmes</a></li>
+      <li><a href="">Fee Structure</a></li>
+    </ul>         
+  </li>
+  <li><a class="nav-link scrollto" href="{% url 'staff' %}">Board & Staff</a></li>
+  <li><a href="{% url 'gallery'%}" class="nav-link scrollto">Media</a></li>
+
+  <li><a class="nav-link scrollto" href="{% url 'index' %}#contact">Contact</a></li>
+</ul>
+
+<i class="bi bi-list mobile-nav-toggle"></i>
+</nav><!-- .navbar -->
+
+<a href="#pricing" class="appointment-btn scrollto" style="background-color:#587666"><span class="d-none d-md-inline">Make a</span> Donation</a>
+
+</div>
+</header><!-- End Header -->
 {% endblock %}
 
 {% block application %}
@@ -191,4 +219,8 @@
     });
 </script>
 
+{% endblock %}
+
+{% block footer-link %}
+<li><i class="bx bx-chevron-right"></i> <a href="{% url 'index' %}#contact">Contact</a></li>
 {% endblock %}

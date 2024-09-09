@@ -1,0 +1,166 @@
+{% extends 'gallery/index.html' %}
+{% load static %} 
+
+{% block nav %}
+<ul>
+  <li><a class="nav-link scrollto " href="{% url 'index' %}">Home</a></li>
+  <li class="dropdown"><a href="#"><span>Our School</span> <i class="bi bi-chevron-down"></i></a>
+    <ul>
+      <li><a href="">School Profile</a></li>
+      <li><a href="{% url 'school' %}">About Us</a></li>
+    </ul>
+  </li>
+  <li class="dropdown"><a href="#"><span>Academics</span> <i class="bi bi-chevron-down"></i></a>
+    <ul>
+      <li><a href="{% url 'index' %}#features">Grade Levels</a></li>
+      <li><a href="{% url 'make_application' %}">Admission</a></li>
+      <li><a href="">Programmes</a></li>
+      <li><a href="">Fee Structure</a></li>
+    </ul>         
+  </li>
+  <li><a class="nav-link scrollto active" href="{% url 'staff' %}">Board & Staff</a></li>
+  <li><a href="{% url 'gallery'%}" class="nav-link scrollto">Media</a></li>
+
+  <li><a class="nav-link scrollto" href="{% url 'index' %}#contact">Contact</a></li>
+</ul>
+
+<i class="bi bi-list mobile-nav-toggle"></i>
+</nav><!-- .navbar -->
+
+<a href="#pricing" class="appointment-btn scrollto" style="background-color:#587666"><span class="d-none d-md-inline">Make a</span> Donation</a>
+
+</div>
+</header><!-- End Header -->
+{% endblock %}
+
+{% block application %}
+<section id="hero">
+  <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active" style="background-image: url({% static 'img/office.png' %})">
+        <div class="container" style="background-color:rgba(255, 255, 255, 0.449)">
+          <h1 style="color: black; font-size:xx-large;font-weight:900;margin-top:0">BOARD & STAFF</h1>         
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main>
+  <section id="school">
+    <h1>SCHOOL STAFF AND DIRECTORS </h2>
+
+      <br><br>
+      <div class="container">
+        <h2 class="h3">SCHOOL DIRECTORS</h2>
+
+        <div class="row">
+          <div class="col-md-6">
+            <p>
+             Our school directors are visionary leaders dedicated to fostering a nurturing and innovative learning environment.
+             With a strong commitment to academic excellence and holistic development, they work tirelessly to ensure that our students receive the best education possible. 
+             Their leadership and passion for education are evident in every aspect of our school, guiding us towards a bright future.
+            </p>
+            <p>
+              Our directors are not only visionary leaders in education but also deeply spiritual individuals who believe in the importance of moral and ethical values.
+              They are committed to nurturing both the minds and spirits of our students, ensuring that our school fosters an environment where character development is just as important as academic achievement.
+              Their spiritual guidance helps create a compassionate and supportive community, encouraging students to grow into well-rounded individuals with strong moral foundations.
+            </p>
+          </div>
+          <div class="col-md-6">     
+            <div class="team-img position-relative overflow-hidden">
+              <img src="{% static 'img/staff/director.png'%}" class="img-fluid" alt="">
+              <div class="team-social">
+                  <a class="btn btn-square btn-primary rounded-circle m-1" href="tel:+254726580840"><i class="fas fa-phone"></i></a>
+                  <a class="btn btn-square btn-primary rounded-circle m-1" href="mailto:esther.songok@gmail.com"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="bg-light text-center p-4">
+              <h5>Mrs. Esther Songok</h5>
+              <span class="text-secondary">Director</span>
+          </div>
+          </div>
+        </div>  
+
+        <div class="row">
+          <div class="col-md-6">            
+            <div class="team-img position-relative overflow-hidden">
+              <img src="{% static 'img/staff/director2.png'%}" class="img-fluid" alt="">
+              <div class="team-social">
+                  <a class="btn btn-square btn-primary rounded-circle m-1" href="tel:+254726580840"><i class="fas fa-phone"></i></a>
+                  <a class="btn btn-square btn-primary rounded-circle m-1" href="mailto:"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="bg-light text-center p-4">
+              <h5>Mr. Songok</h5>
+              <span class="text-secondary">Director</span>
+          </div>
+          </div>
+          <div class="col-md-6">
+            <p style="margin-top:20px;">
+              The school management treasures the notion of partnership and team work both internally and externally.
+              Our hands are therefore open to receive and welcome any opportunity for partnership and collaboration with all individuals and organizations/institutions that sympathize and would therefore wish to join our struggle in the pursuit of our cherished cause.
+            </p>
+          </div>
+          
+        </div>  
+
+        <br>
+        <h2 class="h3">SCHOOL STAFF</h2>
+        <p>
+          The school has 28 staff who are dedicated professionals who are passionate about teaching and learning. They are committed to providing
+          a supportive and inclusive learning environment that fosters academic excellence and personal growth.
+        </p>
+        <p>
+          Our staff are not only experts in their fields but also caring individuals who take a genuine interest in
+          the well-being and success of our students.
+        </p>
+
+        <div class="row">
+          <div class="col-md-6">
+            <img src="{% static 'img/staff/headteacher.png' %}" alt="" class="img-fluid">
+            <p class="caption">The Headteacher in his office</p>
+          </div>
+          <div class="col-md-6">
+            <img src="{% static 'img/staff/staff3.png' %}" alt="" class="img-fluid">
+            <p class="caption">Deputy Headteacher and the Headteacher</p>
+          </div>
+        </div>
+
+        <p>
+          We therefore showcase more of our dedicated staff members who contribute to the vibrant and supportive environment of our school.
+          Each of these professionals plays a crucial role in ensuring that our students receive the highest quality of education and care.
+          Whether in the classroom, guiding extracurricular activities, or providing essential support services, our staff members work tirelessly to nurture the growth and success of every student.
+          Their commitment and enthusiasm are the driving force behind the positive experiences and achievements of our students.
+        </p>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="{% static 'img/staff/staff1.png' %}" class="img-fluid" alt="">
+            <p class="caption">School Secretary</p>
+          </div>
+          <div class="col-lg-6">
+            <img src="{% static 'img/staff/image63.png' %}" class="img-fluid" alt="">
+            <p class="caption">School Staff Attending Friday Church Service</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="{% static 'img/staff/staff6.png' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6">
+            <img src="{% static 'img/staff/staff5.png' %}" class="img-fluid" alt="">
+            <p class="caption">School Security</p>
+          </div>
+        </div>
+      </div>
+  </section>
+</main>
+
+
+{% endblock %}
+
+{% block footer-link %}
+<li><i class="bx bx-chevron-right"></i> <a href="{% url 'index' %}#contact">Contact</a></li>
+{% endblock %}
