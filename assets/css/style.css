@@ -2050,23 +2050,6 @@ button[type="submit"]:hover {
   text-decoration: underline overline;
 }
 
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: black; }
-}
-
-#typewriter {
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 0.15em solid black; 
-  animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
-}
 
 .col-md-6 h3 {
   justify-content: center;
@@ -2074,15 +2057,6 @@ button[type="submit"]:hover {
   color: black;
 }
 
-#motto {
-  justify-content: center;
-  display: flex;
-  color: black;
-  text-decoration: none;
-  font-style: italic;
-  font-weight: bolder;  
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
 
 .vision {
   text-align: center;
@@ -2155,15 +2129,6 @@ button[type="submit"]:hover {
   color: black;
 }
 
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes blink {
-  50% { border-color: transparent; }
-}
-
 
 .col-md-6 .team-img::before,
 .col-md-6 .team-img::after {
@@ -2206,3 +2171,53 @@ button[type="submit"]:hover {
     opacity: 1;
 }
 
+.card-body-typing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+#motto {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: none;
+  font-family: monospace;
+  font-size: 3em;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-style: italic;
+  width: 100%;
+  animation: typing 4s steps(30, end) forwards, blink 0.75s step-end infinite;
+  box-sizing: border-box; 
+}
+
+@media (max-width: 1200px) {
+  #motto {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 992px) {
+  #motto {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 768px) {
+  #motto {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 576px) {
+  #motto {
+    font-size: 1.2em;
+  }
+}
