@@ -52,11 +52,12 @@
 
       <br><br>
     <h3 class='h3'>SCHOOL MOTTO</h3>
-      <div class="card">
-        <div class="card-body">
-          <h2 style="text-decoration: none;" id="motto">Education is the Key to Success</h2>
-        </div>
-      </div>
+
+  <div class="card">
+    <div class="card-body-typing">
+      <h2 id="motto"></h2>
+    </div>
+  </div>
 
       <div class="container">
         <h2 class="h3">ABOUT HEROS ACADEMY</h2>
@@ -260,8 +261,38 @@
       </div>
   </section>
 </main>
+
+<script>
+  const text = "Education is the Key to Success";
+  const element = document.getElementById('motto');
+  let index = 0;
+  let typing = true;
+
+  function type() {
+    if (index < text.length) {
+      element.textContent += text[index++];
+      setTimeout(type, 100);
+    } else {
+      typing = false;
+      setTimeout(deleteText, 2000);
+    }
+  }
+
+  function deleteText() {
+    if (index > 0) {
+      element.textContent = element.textContent.slice(0, -1);
+      index--;
+      setTimeout(deleteText, 50);
+    } else {
+      typing = true;
+      setTimeout(type, 1000);
+    }
+  }
+  type();
+</script>
 {% endblock %}
 
 {% block footer-link %}
 <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index' %}#contact">Contact</a></li>
 {% endblock %}
+
