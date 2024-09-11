@@ -2,6 +2,8 @@
 {% load static %} 
 
 {% block nav %}
+<link href="{% static 'vendor/aos/aos.css'%}" rel="stylesheet">
+
 <ul>
   <li><a class="nav-link scrollto " href="{% url 'index' %}">Home</a></li>
   <li class="dropdown"><a href="#"><span>Our School</span> <i class="bi bi-chevron-down"></i></a>
@@ -55,7 +57,7 @@
         <h2 class="h3">SCHOOL DIRECTORS</h2>
 
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-6" data-aos="zoom-in">
             <p>
              Our school directors are visionary leaders dedicated to fostering a nurturing and innovative learning environment.
              With a strong commitment to academic excellence and holistic development, they work tirelessly to ensure that our students receive the best education possible. 
@@ -67,7 +69,7 @@
               Their spiritual guidance helps create a compassionate and supportive community, encouraging students to grow into well-rounded individuals with strong moral foundations.
             </p>
           </div>
-          <div class="col-md-6">     
+          <div class="col-md-6" data-aos="zoom-out">     
             <div class="team-img position-relative overflow-hidden">
               <img src="{% static 'img/staff/director.png'%}" class="img-fluid" alt="">
               <div class="team-social">
@@ -83,12 +85,12 @@
         </div>  
 
         <div class="row">
-          <div class="col-md-6">            
+          <div class="col-md-6" data-aos="zoom-out">            
             <div class="team-img position-relative overflow-hidden">
               <img src="{% static 'img/staff/director2.png'%}" class="img-fluid" alt="">
               <div class="team-social">
                   <a class="btn btn-square btn-primary rounded-circle m-1" href="tel:+254726580840"><i class="fas fa-phone"></i></a>
-                  <a class="btn btn-square btn-primary rounded-circle m-1" href="mailto:"><i class="fas fa-envelope"></i></a>
+                  <a class="btn btn-square btn-primary rounded-circle m-1" href="mailto:pjsongok@yahoo.com"><i class="fas fa-envelope"></i></a>
               </div>
             </div>
             <div class="bg-light text-center p-4">
@@ -96,7 +98,7 @@
               <span class="text-secondary">Director</span>
           </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6" data-aos="zoom-in">
             <p style="margin-top:20px;">
               The school management treasures the notion of partnership and team work both internally and externally.
               Our hands are therefore open to receive and welcome any opportunity for partnership and collaboration with all individuals and organizations/institutions that sympathize and would therefore wish to join our struggle in the pursuit of our cherished cause.
@@ -116,13 +118,13 @@
           the well-being and success of our students.
         </p>
 
-        <div class="row">
-          <div class="col-md-6">
-            <img src="{% static 'img/staff/headteacher.png' %}" alt="" class="img-fluid">
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-6"  id="images">
+            <img src="{% static 'img/staff/headteacher.png' %}" id="images" alt="" class="img-fluid">
             <p class="caption">The Headteacher in his office</p>
           </div>
-          <div class="col-md-6">
-            <img src="{% static 'img/staff/staff3.png' %}" alt="" class="img-fluid">
+          <div class="col-md-6" id="images">
+            <img src="{% static 'img/staff/staff3.png' %}" id="images" alt="" class="img-fluid">
             <p class="caption">Deputy Headteacher and the Headteacher</p>
           </div>
         </div>
@@ -135,21 +137,22 @@
         </p>
 
         <div class="row">
-          <div class="col-lg-6">
-            <img src="{% static 'img/staff/staff1.png' %}" class="img-fluid" alt="">
+          <div class="col-lg-6" id="images">
+            <img src="{% static 'img/staff/staff1.png' %}" id="images" class="img-fluid" alt="">
             <p class="caption">School Secretary</p>
           </div>
-          <div class="col-lg-6">
-            <img src="{% static 'img/staff/image63.png' %}" class="img-fluid" alt="">
+          <div class="col-lg-6" id="images">
+            <img src="{% static 'img/staff/image63.png' %}" id="images" class="img-fluid" alt="">
             <p class="caption">School Staff Attending Friday Church Service</p>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-lg-6" id="images">
             <img src="{% static 'img/staff/staff6.png' %}" class="img-fluid" alt="">
+            <p class="caption">Mr. Joel - Teacher</p>
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-6" id="images">
             <img src="{% static 'img/staff/staff5.png' %}" class="img-fluid" alt="">
             <p class="caption">School Security</p>
           </div>
@@ -158,7 +161,14 @@
   </section>
 </main>
 
-
+<script src="{% static 'vendor/aos/aos.js'%}"></script>
+<script>
+  AOS.init({
+    duration: 1000, 
+    easing: 'ease-in-out',
+    once: true
+  });
+</script>
 {% endblock %}
 
 {% block footer-link %}

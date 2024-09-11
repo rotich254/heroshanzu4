@@ -2,6 +2,8 @@
 {% load static %} 
 
 {% block nav %}
+<link href="{% static 'vendor/aos/aos.css'%}" rel="stylesheet">
+
 <ul>
   <li><a class="nav-link scrollto " href="{% url 'index' %}">Home</a></li>
   <li class="dropdown"><a href="#" class="active"><span>Our School</span> <i class="bi bi-chevron-down"></i></a>
@@ -59,10 +61,10 @@
     </div>
   </div>
 
-      <div class="container">
+      <div class="container" >
         <h2 class="h3">ABOUT HEROS ACADEMY</h2>
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-6" data-aos="fade-right" data-aos-delay="100">
             <p>
               Heros School is a Mixed Nursery, Primary and Junior secondary School located in Shanzu ,Mombasa  County in the coastal city of Kenya.
               The School started operations in 2009 with a population of 95pupils and has since grown to over 350 pupils.
@@ -71,16 +73,17 @@
               Driven by the principle of social inclusion, our approach will enable to create a conducive environment that embraces social, religious and cultural diversity while supporting every individual learner to achieve their full potential goals.
             </p>
           </div>
-          <div class="col-md-6">            
+          <div class="col-md-6" data-aos="fade-left" data-aos-delay="300">            
             <img src="{% static 'img/heros2.png'%}" class="img-fluid" alt="">
           </div>
         </div>  
 
+        <br> 
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-6" data-aos="fade-right" data-aos-delay="200">
             <img src="{% static 'img/image9.JPG'%}"  class="img-fluid" alt="">
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6" data-aos="fade-left" data-aos-delay="100">
             <div class="card">
               <div class="card-body">
                 <p>
@@ -96,14 +99,14 @@
         </div>
         <br><hr>
 
-        <div class="vision">
+        <div class="vision" data-aos="fade-down">
           <h1>SCHOOL VISION</h1>
           <h2 style="text-decoration: none;">
             A community where all children have equal opportunity to access quality education services for sustainable development.
           </h2>
         </div>
 
-        <div class="vision">
+        <div class="vision" data-aos="fade up">
           <h1>SCHOOL MISSION</h1>
           <h2 style="text-decoration: none;">
             To blend the Kenyan curriculum with global best practice in education.
@@ -113,7 +116,7 @@
         </div>
 
 
-        <div class="offers">
+        <div class="offers" data-aos="zoom-in">
           <h1>WHAT WE OFFER</h1>
           <div class="row">
             <div class="col-md-6">
@@ -133,21 +136,21 @@
         <div class="values">
           <h1>OUR VALUES</h1>
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="fade-right">
               <div class="card">
                 <div class="card-body">
                   <h4>GOD FEARING</h4>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="fade-down">
               <div class="card">
                 <div class="card-body">
                   <h4>LOVE, CARE, COMPASSION</h4>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4"data-aos="fade-left">
               <div class="card">
                 <div class="card-body">
                   <h4>EXCELLENCE</h4>
@@ -157,21 +160,21 @@
           </div>
 
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="fade-right">
               <div class="card">
                 <div class="card-body">
                   <h4>DISCIPLINE</h4>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="zoom-out">
               <div class="card">
                 <div class="card-body">
                   <h4>RESPECT</h4>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="fade-left">
               <div class="card">
                 <div class="card-body">
                   <h4>ENVIRONMENT CARE</h4>
@@ -180,21 +183,21 @@
             </div>
           </div>   
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="fade-right">
               <div class="card">
                 <div class="card-body">
                   <h4>INTEGRITY</h4>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="fade-up">
               <div class="card">
                 <div class="card-body">
                   <h4>ACCOUNTABILITY</h4>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="fade-left">
               <div class="card">
                 <div class="card-body">
                   <h4>TEAM WORK</h4>
@@ -228,7 +231,7 @@
         <br>
         <hr>
         
-        <div class="objectives">
+        <div class="objectives" data-aos="zoom-in">
           <h1>SCHOOL OBJECTIVES</h1>
           <ul>
             <li><i class="bi bi-check2-all"></i><span></span>To build a safe and secure school providing an exciting, inclusive curriculum this equips children with skills for lifelong learning and achieving high standards of living.</li>
@@ -241,7 +244,7 @@
           </ul>
         </div>
 
-        <div class="objectives">
+        <div class="objectives" data-aos="zoom-out">
           <div class="card">
             <div class="card-body">
               <h1 style="color: white;">KEYS TO SUCCESS</h1>
@@ -289,6 +292,15 @@
     }
   }
   type();
+</script>
+
+<script src="{% static 'vendor/aos/aos.js'%}"></script>
+<script>
+  AOS.init({
+    duration: 1000, 
+    easing: 'ease-in-out',
+    once: true
+  });
 </script>
 {% endblock %}
 
