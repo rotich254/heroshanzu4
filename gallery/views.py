@@ -60,7 +60,7 @@ def index(request):
             
             ContactSubmission.objects.create(name=name,email=email,message=message)
             
-            subject = f'Contact Submission by {name}'
+            subject = f'Contact Submission by {name} from Website'
             
             emailmessage= EmailMessage(
                 subject,

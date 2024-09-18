@@ -67,8 +67,12 @@
             <ul>
               <li><a href="#features">Grade Levels</a></li>
               <li><a href="{% url 'make_application' %}">Admission</a></li>
-              <li><a href="">Programmes</a></li>
-              <li><a href="">Fee Structure</a></li>
+              <li class="dropdown"><a href=""><span>Fee Structure</span><i class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li><a href="{% static 'pdf/feestructure.pdf' %}" target="_blank">Primary Fee Structure</a></li>
+                <li><a href="{% static 'pdf/feestructurejuniorsec.pdf' %}" target="_blank">Junior Secondary Fee Structure</a></li>
+              </ul>
+              </li>
             </ul>         
           </li>
           <li><a class="{% url 'staff' %}" href="{% url 'staff' %}">Board & Staff</a></li>
@@ -98,7 +102,7 @@
         <!-- Slide 1 -->
         <div class="carousel-item active" style="background-image: url({% static 'img/media/image42.png' %})">
           <div class="container" style="background-color:rgba(255, 255, 255, 0.449)">
-            <h2>Welcome to <span>Hero Shanzu Primary & Junior Secondary School</span></h2>
+            <h2>Welcome to <span>Heros Shanzu Primary & Junior Secondary School</span></h2>
             <h3>Education Is The Key to Success</h3>
             <h4>Holistic Education</h4>
             <p style="color:black">Enjoy a well-rounded education that fosters intellectual, social, emotional, and physical growth, 
@@ -110,7 +114,7 @@
         <!-- Slide 2 -->
         <div class="carousel-item" style="background-image: url({% static 'img/media/image6.png' %})">
           <div class="container" style="background-color:rgba(255, 255, 255, 0.449)">
-            <h2>Welcome to <span>Hero Shanzu Primary & Junior Secondary School</span></h2>
+            <h2>Welcome to <span>Heros Shanzu Primary & Junior Secondary School</span></h2>
             <h3>Education Is The Key to Success</h3>
             <h4>Extracurricular Activities</h4>
             <p style="color:black">Explore your interests and passions in a variety of extracurricular activities, clubs, and events that enrich your educational experience and broaden your horizons.</p>
@@ -121,7 +125,7 @@
         <!-- Slide 3 -->
         <div class="carousel-item" style="background-image: url({% static 'img/media/image60.png'%})">
           <div class="container" style="background-color:rgba(255, 255, 255, 0.449)">
-            <h2>Welcome to <span>Hero Shanzu Primary & Junior Secondary School</span></h2>
+            <h2>Welcome to <span>Heros Shanzu Primary & Junior Secondary School</span></h2>
             <h3>Education Is The Key to Success</h3>
             <h4>Community Service</h4>
             <p style="color:black">Give back to the community and develop your leadership skills through volunteer opportunities and community service projects that make a positive impact on society.</p>
@@ -1166,7 +1170,8 @@
               {% block footer-link %}
               <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact</a></li>
               {% endblock %}
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Fee Structure</a></li>              
+              <li><i class="bx bx-chevron-right"></i> <a href="{% static 'pdf/feestructure.pdf' %}" target="_blank">Primary Fee Structure</a></li> 
+              <li><i class="bx bx-chevron-right"></i> <a href="{% static 'pdf/feestructurejuniorsec.pdf' %}" target="_blank">Junior Sec Fee Structure</a></li>             
             </ul>
           </div>
 
