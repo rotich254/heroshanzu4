@@ -16,8 +16,12 @@
     <ul>
       <li><a href="{% url 'index' %}#features">Grade Levels</a></li>
       <li><a href="{% url 'make_application' %}">Admission</a></li>
-      <li><a href="">Programmes</a></li>
-      <li><a href="">Fee Structure</a></li>
+      <li class="dropdown"><a href=""><span>Fee Structure</span><i class="bi bi-chevron-down"></i></a>
+        <ul>
+          <li><a href="{% static 'pdf/feestructure.pdf' %}" target="_blank">Primary Fee Structure</a></li>
+          <li><a href="{% static 'pdf/feestructurejuniorsec.pdf' %}" target="_blank">Junior Secondary Fee Structure</a></li>
+        </ul>
+      </li>
     </ul>         
   </li>
   <li><a class="nav-link scrollto" href="{% url 'staff' %}">Board & Staff</a></li>
