@@ -531,10 +531,27 @@
 
 
               </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
+              <!-- <div class="col-lg-6 order-1 order-lg-2 text-center">
                 <img src="{% static 'img/media/image22.png'%}"  alt="" class="img-fluid">
+              </div> -->
+
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <div class="grade-slider swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="{% static 'img/media/image22.png'%}" class="img-fluid" alt="Image 1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{% static 'img/media/image44.png'%}" class="img-fluid" alt="Image 2">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{% static 'img/media/image61.png'%}" class="img-fluid" alt="Image 2">
+                        </div>
+                    </div>
+                </div>
               </div>
             </div>
+
           </div>
 
           <div class="tab-pane fade" id="features-tab-2" role="tabpanel">
@@ -554,7 +571,19 @@
 
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="{% static 'img/media/image7.png'%}" alt="" class="img-fluid">
+                <div class="grade-slider swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="{% static 'img/media/image7.png'%}" class="img-fluid" alt="Image 1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{% static 'img/media/image2.png'%}" class="img-fluid" alt="Image 2">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{% static 'img/media/image20.png'%}" class="img-fluid" alt="Image 2">
+                        </div>
+                    </div>
+                </div>
               </div>
             </div>
           </div>
@@ -576,8 +605,20 @@
 
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="{% static 'img/media/image40.png'%}" class="img-fluid" alt="">
-              </div>
+                <div class="grade-slider swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="{% static 'img/media/image40.png'%}" class="img-fluid" alt="Image 1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{% static 'img/media/image43.png'%}" class="img-fluid" alt="Image 2">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{% static 'img/media/image64.png'%}" class="img-fluid" alt="Image 2">
+                        </div>
+                    </div>
+                </div>
+            </div>
             </div>
           </div>
 
@@ -855,6 +896,21 @@
         <div>
           <button class="btn btn-success" onclick="openMpesaModal()">Donate Via M-Pesa</button>
         </div>
+
+        <br>
+
+        <div class="col-lg-8 donations-list">
+          <p>
+            We also accept donations in the form of:
+            <ul>
+                <li><i class="bi bi-check2-all"></i>Stationery</li>
+                <li><i class="bi bi-check2-all"></i>Food</li>
+                <li><i class="bi bi-check2-all"></i>Games Attires (e.g., Kits and Balls)</li>
+                <li><i class="bi bi-check2-all"></i>Uniforms</li>
+                <li><i class="bi bi-check2-all"></i>Sanitary Products</li>
+            </ul>
+        </p>
+      </div>
       
    
         <div class="modal fade" id="mpesaModal" tabindex="-1" role="dialog" aria-labelledby="mpesaModalLabel" aria-hidden="true">
@@ -1229,6 +1285,20 @@
     })();
 
   </script>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper('.grade-slider', {
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+    });
+</script>
+
+
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>

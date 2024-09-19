@@ -2298,3 +2298,20 @@ button[type="submit"]:hover {
 #images:hover img {
   transform: scale(1.05);
 }
+
+.donations-list {
+  margin: 20px 0;
+}
+
+.donations-list p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.donations-list ul {
+  list-style-type: none;
+}
+
+.donations-list li {
+  margin-bottom: 5px;
+}
