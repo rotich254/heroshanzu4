@@ -519,7 +519,7 @@
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
                 <h3 class="">Pre Primary School</h3>
                 <p class="fst-italic">
-                  Our Pre Primary program, spanning Playgroup, PP1 and PP3, is designed to foster a love for learning in young children through engaging and age-appropriate activities.
+                  Our Pre Primary program, spanning Playgroup, PP1 and PP2, is designed to foster a love for learning in young children through engaging and age-appropriate activities.
                 </p>
                 <div class="gradelist">
                   <ul>
@@ -844,52 +844,45 @@
             Together, we can make a difference and empower the next generation through education. Please consider donating today.
           </p>
         </div>
+
         <div class="row donation-container">
-            <!-- $50 Donation Card -->
-
+          <div class="col-lg-6">
             <div class="box" data-aos="fade-up" data-aos-delay="100">
-                <h3></h3>
-                <p>I Want to Give</p>
-                <h4><sup>$</sup>100<span></span></h4>
-                <div class="btn-wrap">
-                    <div id="paypal-button-container-100"></div>
+              <h3>Donate Via PayPal</h3>
+              
+                <div id="donate-button-container">
+                  <div id="donate-button"></div>
+    
+                  <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+                  <script>
+                  PayPal.Donation.Button({
+                  env:'production',
+                  hosted_button_id:'ZPWQGS4TDU2EN',
+                  image: {
+                    src:'https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif',
+                    alt:'Donate with PayPal button',
+                    title:'PayPal - The safer, easier way to pay online!',
+                  }
+                  }).render('#donate-button');
+                  </script>
                 </div>
             </div>
+          </div>
 
-            <!-- $500 Donation Card -->
-            <div class="box" data-aos="fade-up" data-aos-delay="100">
-                <h3></h3>
-                <p>I Want to Give</p>
-                <h4><sup>$</sup>500<span></span></h4>
-             
-                <div class="btn-wrap">
-                    <div id="paypal-button-container-500"></div>
-                </div>
-            </div>
 
-            <!-- Custom Amount Donation Card -->
+          <div class="col-lg">
             <div class="box" data-aos="fade-up" data-aos-delay="100">
-                <h3></h3>
-                <p>I Want to Give</p>
-                <label for="other" class="btn-label">Other</label>
-                <div class="btn-wrap">
-                    <input type="radio" id="other" name="amount" class="btn-radio" onclick="toggleAmountInput(event)">
-                    <input type="number" id="other-amount" name="other-amount" class="amount-input" placeholder="Enter amount">
-                </div>
-                <div class="btn-wrap">
-                    <div id="paypal-button-container-custom"></div>
-                </div>
+              <h3>Donate Via Mpesa</h3>
+              <button class="btn btn-success" onclick="openMpesaModal()">Donate (Mpesa)</button>
             </div>
+          </div>
+
         </div>
- 
-
-        <div>
-          <button class="btn btn-success" onclick="openMpesaModal()">Donate Via M-Pesa</button>
-        </div>
-
         <br>
+        
 
         <div class="col-lg-8 donations-list">
+          <span>For any more information about our donations, Contact Us Here: <a href="mailto:herosacademyshanzuaic@yahoo.com">herosacademyshanzuaic@yahoo.com</a></span>
           <p>
             We also accept donations in the form of:
             <ul>

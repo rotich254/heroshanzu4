@@ -15,7 +15,6 @@ from django_daraja.mpesa.core import MpesaClient
 from django.views.decorators.csrf import csrf_exempt
 import json
 import logging
-from django.urls import reverse
 
 
 def index(request):
@@ -175,7 +174,11 @@ def donation_checkout(request):
     return render(request, 'gallery/checkout.html')
 
 logger = logging.getLogger(__name__)
-
+import logging
+from django.shortcuts import render
+from django_daraja.mpesa.core import MpesaClient
+from django.http import JsonResponse
+from django.urls import reverse
 
 # Set up logging
 logger = logging.getLogger(__name__)
