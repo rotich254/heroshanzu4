@@ -10,6 +10,7 @@ from django.contrib import messages
 from django.shortcuts import redirect
 from django.urls import reverse
 from .models import ContactSubmission, Subscriber, Admission
+from django.core.paginator import Paginator
 from django.conf import settings
 from django_daraja.mpesa.core import MpesaClient
 from django.views.decorators.csrf import csrf_exempt
@@ -89,18 +90,35 @@ def index(request):
 # def image_gallery(request):
 #     images = Image.objects.all()
 #     return render(request, 'gallery/media.html', {'images': images})
-
 def image_gallery(request):
+    # Retrieve images from Firebase Storage
     bucket = storage.bucket()
     blobs = bucket.list_blobs()
     images = []
 
     for blob in blobs:
-        if blob.content_type.startswith('image/'):
+        if blob.content_type and blob.content_type.startswith('image/'):
             image_url = blob.generate_signed_url(timedelta(seconds=300), method='GET')
             images.append({'image_url': image_url})
 
-    return render(request, 'gallery/media.html', {'images': images})
+    # Paginate images (10 images per page)
+    paginator = Paginator(images, 9)
+    page_number = request.GET.get('page')  # Get page number from query params
+    page_obj = paginator.get_page(page_number)
+
+    return render(request, 'gallery/media.html', {'page_obj': page_obj})
+
+# def image_gallery(request):
+#     bucket = storage.bucket()
+#     blobs = bucket.list_blobs()
+#     images = []
+
+#     for blob in blobs:
+#         if blob.content_type.startswith('image/'):
+#             image_url = blob.generate_signed_url(timedelta(seconds=300), method='GET')
+#             images.append({'image_url': image_url})
+
+#     return render(request, 'gallery/media.html', {'images': images})
 
 def make_application(request):
     if request.method == 'POST':

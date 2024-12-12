@@ -57,20 +57,57 @@
 
 
     
-    <section class="inner-page">
+    <!-- <section class="inner-page">
         <div class="container">
           <a href="{% url 'index' %}"><i class="bi bi-arrow-left"></i> Back to Homepage</a>
             <div class="gallery">
-            {% for image in images %}
-                <div class="card" id="images">
-                    <img src="{{ image.image_url }}" class="gall" alt="">
-                    <div class="card-content">
+              <div class="row">
+                {% for image in images %}
+              
+                  <div class="col-lg-4">
+                    <div class="card" id="images">
+                        <img src="{{ image.image_url }}" loading="lazy" class="gall" alt="">
+                        <div class="card-content">
+                        </div>
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>  -->
+
+
+    <section class="gallery">
+    <div class="container">
+        <div class="row">
+            {% for image in page_obj %}
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="{{ image.image_url }}" loading="lazy" class="card-img-top img-fluid" alt="Image">
                     </div>
                 </div>
             {% endfor %}
-            </div>
         </div>
-    </section> 
+    </div>
+</section>
+
+<div class="pagination">
+  <div class="p-1">
+<span>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+  </div>
+    
+    <div class="pagination-buttons">
+        {% if page_obj.has_previous %}
+            <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-outline-danger btn-sm">Previous</a>
+        {% endif %}
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}" class="btn btn-outline-secondary btn-sm">Next</a>
+        {% endif %}
+    </div>
+</div>
+
     
   </main>
 

@@ -20,7 +20,7 @@ body {
     border-radius: 4px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    flex: 1 1 calc(33.333% - 10px);
+    flex: 1 1 calc(33.333% - 10px); /* Ensures 3 cards per row */
     display: flex;
     flex-direction: column;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -33,7 +33,7 @@ body {
 
 .card img {
     width: 100%;
-    height: auto;
+    height: auto; /* Maintains aspect ratio */
     transition: transform 0.3s, filter 0.3s;
 }
 
@@ -52,20 +52,51 @@ body {
     background-color: #f0f0f0;
 }
 
+/* Responsive styles */
 @media (min-width: 992px) {
     .card {
-        flex: 1 1 calc(33.333% - 10px);
+        flex: 1 1 calc(33.333% - 10px); /* 3 cards per row */
     }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
     .card {
-        flex: 1 1 calc(50% - 10px);
+        flex: 1 1 calc(50% - 10px); /* 2 cards per row */
     }
 }
 
 @media (max-width: 767px) {
     .card {
-        flex: 1 1 100%;
+        flex: 1 1 100%; /* 1 card per row */
     }
+}
+
+/* Pagination styling */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.pagination a {
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+.pagination span {
+    padding: 8px 16px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    font-weight: bold;
 }
