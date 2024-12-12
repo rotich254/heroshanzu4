@@ -89,27 +89,26 @@
                 </div>
             {% endfor %}
         </div>
+        <div class="pagination" style='display:flex;justify-content:center;align-items:center;'>    
+          <div class="pagination-buttons">
+              {% if page_obj.has_previous %}
+                  <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-outline-danger btn-sm">Previous</a>
+              {% endif %}
+      
+                <span>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+          
+      
+              {% if page_obj.has_next %}
+                  <a href="?page={{ page_obj.next_page_number }}" class="btn btn-outline-secondary btn-sm">Next</a>
+              {% endif %}
+          </div>
+      </div>
     </div>
 </section>
 
-<div class="pagination">
-  <div class="p-1">
-<span>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
-  </div>
-    
-    <div class="pagination-buttons">
-        {% if page_obj.has_previous %}
-            <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-outline-danger btn-sm">Previous</a>
-        {% endif %}
-
-        {% if page_obj.has_next %}
-            <a href="?page={{ page_obj.next_page_number }}" class="btn btn-outline-secondary btn-sm">Next</a>
-        {% endif %}
-    </div>
-</div>
 
     
-  </main>
+</main>
 
   <!-- End #main -->
 
