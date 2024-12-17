@@ -45,7 +45,7 @@ def index(request):
                 
                 try:
                     emailmessage.send()
-                    messages.success(request, 'Subscription Successful! A confirmation Email Has Been Sent to You')
+                    messages.success(request, 'Subscription Successful! A confirmation Email Has Been Sent to You', extra_tags='subscribe')
                     
                 except Exception as e:
                     messages.error(request, f'Error Occured During Subscription: {e}')
@@ -71,7 +71,7 @@ def index(request):
             
             try:
                 emailmessage.send()
-                messages.success(request, 'Message Has Been Sent Successfully')            
+                messages.success(request, 'Message Has Been Sent Successfully',extra_tags='contact')            
                 
             except Exception as e:
                 messages.error(request, f'An Error Has Occured, {e}')
