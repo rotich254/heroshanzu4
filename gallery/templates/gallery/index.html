@@ -91,7 +91,7 @@
   {% endblock %}
 
   <!-- ======= Hero Section ======= -->
-   {% block application %}
+  {% block application %}
   <section id="hero">
     <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
@@ -562,245 +562,245 @@
 
    
   <!-- ======= Pricing Section ======= -->
-  <section id="pricing" class="pricing">
-    <div class="container" data-aos="fade-up">
-        <div class="section-title">
-            <h2>Make A Donation</h2>            
-        </div>
-        <div>
-          <p>
-            Your donation can make a significant impact in the lives of less fortunate students by helping to cover their school fees.
-            By contributing, you are not just providing financial support; you are giving these children the opportunity to access quality education, which is the foundation for a brighter future.
-            Every donation, no matter the size, brings us closer to ensuring that no child is left behind due to financial constraints.
-            Together, we can make a difference and empower the next generation through education. Please consider donating today.
-          </p>
-        </div>
-
-        <div class="row donation-container">
-          <div class="col-lg-6">
-            <div class="box" data-aos="fade-right" data-aos-delay="100">
-              <h3>Donate Via PayPal</h3>
-              
-                <div id="donate-button-container">
-                  <div id="donate-button"></div>
-    
-                  <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
-                  <script>
-                    PayPal.Donation.Button({
-                      env:'production',
-                      hosted_button_id:'ZPWQGS4TDU2EN',
-                      image: {
-                        src:'https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif',
-                        alt:'Donate with PayPal button',
-                        title:'PayPal - The safer, easier way to pay online!',
-                      }
-                    }).render('#donate-button');
-                  </script>
-                </div>
-            </div>
+    <section id="pricing" class="pricing">
+      <div class="container" data-aos="fade-up">
+          <div class="section-title">
+              <h2>Make A Donation</h2>            
+          </div>
+          <div>
+            <p>
+              Your donation can make a significant impact in the lives of less fortunate students by helping to cover their school fees.
+              By contributing, you are not just providing financial support; you are giving these children the opportunity to access quality education, which is the foundation for a brighter future.
+              Every donation, no matter the size, brings us closer to ensuring that no child is left behind due to financial constraints.
+              Together, we can make a difference and empower the next generation through education. Please consider donating today.
+            </p>
           </div>
 
-
-          <div class="col-lg">
-            <div class="box" data-aos="fade-left" data-aos-delay="100">
-              <h3>Donate Via Mpesa</h3>
-              <button class="btn btn-success" onclick="openMpesaModal()">Donate (Mpesa)</button>
-            </div>
-          </div>
-
-        </div>
-        <br>
-        
-
-        <div class="col-lg-8 donations-list">
-          <span>For any more information about our donations, Contact Us Here: <a href="mailto:herosacademyshanzuaic@yahoo.com">herosacademyshanzuaic@yahoo.com</a></span>
-          <p>
-            We also accept donations in the form of:
-            <ul>
-                <li><i class="bi bi-check2-all"></i>Stationery</li>
-                <li><i class="bi bi-check2-all"></i>Food</li>
-                <li><i class="bi bi-check2-all"></i>Games Attires (e.g., Kits and Balls)</li>
-                <li><i class="bi bi-check2-all"></i>Uniforms</li>
-                <li><i class="bi bi-check2-all"></i>Sanitary Products</li>
-            </ul>
-        </p>
-      </div>
+          <div class="row donation-container">
+            <div class="col-lg-6">
+              <div class="box" data-aos="fade-right" data-aos-delay="100">
+                <h3>Donate Via PayPal</h3>
+                
+                  <div id="donate-button-container">
+                    <div id="donate-button"></div>
       
-   
-        <div class="modal fade" id="mpesaModal" tabindex="-1" role="dialog" aria-labelledby="mpesaModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class="modal-title" id="mpesaModalLabel">M-Pesa Payment</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                      <form id="mpesaForm">
-                          <input type="hidden" name="csrfmiddlewaretoken" id="csrf_token">
-                          <div class="form-group">
-                              <label for="phone_number">Phone Number:</label>
-                              <input type="text" class="form-control" id="phone_number" name="phone_number" value="+254" required>
-                          </div>
-                          <div class="form-group">
-                              <label for="amount">Amount:</label>
-                              <input type="number" class="form-control" id="amount" name="amount" required>
-                          </div>
-                          <button type="button" class="btn btn-primary" onclick="submitMpesaForm()">Send</button>
-                      </form>
+                    <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+                    <script>
+                      PayPal.Donation.Button({
+                        env:'production',
+                        hosted_button_id:'ZPWQGS4TDU2EN',
+                        image: {
+                          src:'https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif',
+                          alt:'Donate with PayPal button',
+                          title:'PayPal - The safer, easier way to pay online!',
+                        }
+                      }).render('#donate-button');
+                    </script>
                   </div>
               </div>
+            </div>
+
+
+            <div class="col-lg">
+              <div class="box" data-aos="fade-left" data-aos-delay="100">
+                <h3>Donate Via Mpesa</h3>
+                <button class="btn btn-success" onclick="openMpesaModal()">Donate (Mpesa)</button>
+              </div>
+            </div>
+
           </div>
+          <br>
+          
+
+          <div class="col-lg-8 donations-list">
+            <span>For any more information about our donations, Contact Us Here: <a href="mailto:herosacademyshanzuaic@yahoo.com">herosacademyshanzuaic@yahoo.com</a></span>
+            <p>
+              We also accept donations in the form of:
+              <ul>
+                  <li><i class="bi bi-check2-all"></i>Stationery</li>
+                  <li><i class="bi bi-check2-all"></i>Food</li>
+                  <li><i class="bi bi-check2-all"></i>Games Attires (e.g., Kits and Balls)</li>
+                  <li><i class="bi bi-check2-all"></i>Uniforms</li>
+                  <li><i class="bi bi-check2-all"></i>Sanitary Products</li>
+              </ul>
+          </p>
+        </div>
+        
+    
+          <div class="modal fade" id="mpesaModal" tabindex="-1" role="dialog" aria-labelledby="mpesaModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="mpesaModalLabel">M-Pesa Payment</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="mpesaForm">
+                            <input type="hidden" name="csrfmiddlewaretoken" id="csrf_token">
+                            <div class="form-group">
+                                <label for="phone_number">Phone Number:</label>
+                                <input type="text" class="form-control" id="phone_number" name="phone_number" value="+254" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="amount">Amount:</label>
+                                <input type="number" class="form-control" id="amount" name="amount" required>
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="submitMpesaForm()">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            </div>
+        </div>
+        
+        <script>
+            function openMpesaModal() {
+                var modal = new bootstrap.Modal(document.getElementById('mpesaModal'), {});
+                modal.show();
+            }
+        
+            function submitMpesaForm() {
+                var phoneNumber = document.getElementById('phone_number').value;
+                var amount = document.getElementById('amount').value;
+                var csrfToken = document.getElementById('csrf_token').value;
+        
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', '{% url "mpesa_payment" %}', true);
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                xhr.setRequestHeader('X-CSRFToken', csrfToken);
+        
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        alert('Payment initiated successfully!');
+                        var modal = bootstrap.Modal.getInstance(document.getElementById('mpesaModal'));
+                        modal.hide();
+                    } else if (xhr.readyState == 4 && xhr.status != 200) {
+                        alert('Failed to initiate payment. Please try again.');
+                    }
+                };
+        
+                var params = 'phone_number=' + encodeURIComponent(phoneNumber) +
+                            '&amount=' + encodeURIComponent(amount);
+        
+                xhr.send(params);
+            }
+        </script>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        
+        
       </div>
       
-          </div>
-      </div>
+      <script src="https://www.paypal.com/sdk/js?client-id={{ paypal_client_id }}&currency=USD"></script>
       
       <script>
-          function openMpesaModal() {
-              var modal = new bootstrap.Modal(document.getElementById('mpesaModal'), {});
-              modal.show();
-          }
-      
-          function submitMpesaForm() {
-              var phoneNumber = document.getElementById('phone_number').value;
-              var amount = document.getElementById('amount').value;
-              var csrfToken = document.getElementById('csrf_token').value;
-      
-              var xhr = new XMLHttpRequest();
-              xhr.open('POST', '{% url "mpesa_payment" %}', true);
-              xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-              xhr.setRequestHeader('X-CSRFToken', csrfToken);
-      
-              xhr.onreadystatechange = function() {
-                  if (xhr.readyState == 4 && xhr.status == 200) {
-                      alert('Payment initiated successfully!');
-                      var modal = bootstrap.Modal.getInstance(document.getElementById('mpesaModal'));
-                      modal.hide();
-                  } else if (xhr.readyState == 4 && xhr.status != 200) {
-                      alert('Failed to initiate payment. Please try again.');
-                  }
-              };
-      
-              var params = 'phone_number=' + encodeURIComponent(phoneNumber) +
-                           '&amount=' + encodeURIComponent(amount);
-      
-              xhr.send(params);
+          // Render PayPal button for $50 donation
+          paypal.Buttons({
+              createOrder: function(data, actions) {
+                  return actions.order.create({
+                      purchase_units: [{
+                          amount: {
+                              value: '50.00'
+                          }
+                      }]
+                  });
+              },
+              onApprove: function(data, actions) {
+                  return actions.order.capture().then(function(details) {
+                    alert('Payment initiated successfully!');
+                  });
+              },
+              onError: function(err) {
+                  console.error('An error occurred during the transaction', err);
+              }
+          }).render('#paypal-button-container-50');
+
+          // Render PayPal button for $100 donation
+          paypal.Buttons({
+              createOrder: function(data, actions) {
+                  return actions.order.create({
+                      purchase_units: [{
+                          amount: {
+                              value: '100.00'
+                          }
+                      }]
+                  });
+              },
+              onApprove: function(data, actions) {
+                  return actions.order.capture().then(function(details) {
+                      alert('Thank you for your donation  ' + details.payer.name.given_name);
+                  });
+              },
+              onError: function(err) {
+                  console.error('An error occurred during the transaction', err);
+              }
+          }).render('#paypal-button-container-100');
+
+          // Render PayPal button for $500 donation
+          paypal.Buttons({
+              createOrder: function(data, actions) {
+                  return actions.order.create({
+                      purchase_units: [{
+                          amount: {
+                              value: '500.00'
+                          }
+                      }]
+                  });
+              },
+              onApprove: function(data, actions) {
+                  return actions.order.capture().then(function(details) {
+                      alert('Thank you for your donation  ' + details.payer.name.given_name);
+                  });
+              },
+              onError: function(err) {
+                  console.error('An error occurred during the transaction', err);
+              }
+          }).render('#paypal-button-container-500');
+
+          // Render PayPal button for custom amount donation
+          paypal.Buttons({
+              createOrder: function(data, actions) {
+                  const amount = document.getElementById('other-amount').value || '0.00';
+                  return actions.order.create({
+                      purchase_units: [{
+                          amount: {
+                              value: amount
+                          }
+                      }]
+                  });
+              },
+              onApprove: function(data, actions) {
+                  return actions.order.capture().then(function(details) {
+                      alert('Thank you for your donation  ' + details.payer.name.given_name);
+                  });
+              },
+              onError: function(err) {
+                  console.error('An error occurred during the transaction', err);
+              }
+          }).render('#paypal-button-container-custom');
+
+          // Function to enable the custom amount input
+          function toggleAmountInput(event) {
+              const otherAmountInput = document.getElementById('other-amount');
+              if (event.target.checked) {
+                  otherAmountInput.disabled = false;
+              } else {
+                  otherAmountInput.disabled = true;
+              }
           }
       </script>
-      
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-      
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-      
-      
-    </div>
-    
-    <script src="https://www.paypal.com/sdk/js?client-id={{ paypal_client_id }}&currency=USD"></script>
-    
-<script>
-    // Render PayPal button for $50 donation
-    paypal.Buttons({
-        createOrder: function(data, actions) {
-            return actions.order.create({
-                purchase_units: [{
-                    amount: {
-                        value: '50.00'
-                    }
-                }]
-            });
-        },
-        onApprove: function(data, actions) {
-            return actions.order.capture().then(function(details) {
-              alert('Payment initiated successfully!');
-            });
-        },
-        onError: function(err) {
-            console.error('An error occurred during the transaction', err);
-        }
-    }).render('#paypal-button-container-50');
+    </section>
 
-    // Render PayPal button for $100 donation
-    paypal.Buttons({
-        createOrder: function(data, actions) {
-            return actions.order.create({
-                purchase_units: [{
-                    amount: {
-                        value: '100.00'
-                    }
-                }]
-            });
-        },
-        onApprove: function(data, actions) {
-            return actions.order.capture().then(function(details) {
-                alert('Thank you for your donation  ' + details.payer.name.given_name);
-            });
-        },
-        onError: function(err) {
-            console.error('An error occurred during the transaction', err);
-        }
-    }).render('#paypal-button-container-100');
-
-    // Render PayPal button for $500 donation
-    paypal.Buttons({
-        createOrder: function(data, actions) {
-            return actions.order.create({
-                purchase_units: [{
-                    amount: {
-                        value: '500.00'
-                    }
-                }]
-            });
-        },
-        onApprove: function(data, actions) {
-            return actions.order.capture().then(function(details) {
-                alert('Thank you for your donation  ' + details.payer.name.given_name);
-            });
-        },
-        onError: function(err) {
-            console.error('An error occurred during the transaction', err);
-        }
-    }).render('#paypal-button-container-500');
-
-    // Render PayPal button for custom amount donation
-    paypal.Buttons({
-        createOrder: function(data, actions) {
-            const amount = document.getElementById('other-amount').value || '0.00';
-            return actions.order.create({
-                purchase_units: [{
-                    amount: {
-                        value: amount
-                    }
-                }]
-            });
-        },
-        onApprove: function(data, actions) {
-            return actions.order.capture().then(function(details) {
-                alert('Thank you for your donation  ' + details.payer.name.given_name);
-            });
-        },
-        onError: function(err) {
-            console.error('An error occurred during the transaction', err);
-        }
-    }).render('#paypal-button-container-custom');
-
-    // Function to enable the custom amount input
-    function toggleAmountInput(event) {
-        const otherAmountInput = document.getElementById('other-amount');
-        if (event.target.checked) {
-            otherAmountInput.disabled = false;
-        } else {
-            otherAmountInput.disabled = true;
-        }
-    }
-</script>
-
-</section>
-
-<script src="{% static 'js/script.js'%}"></script>
+    <script src="{% static 'js/script.js'%}"></script>
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
@@ -831,10 +831,10 @@
 
         <div class="row mt-5" >
 
-          <div class="col-lg-6" data-aos='fade-right'>
+          <div class="col-lg-6" >
 
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-12" data-aos='fade-right'>
                 <div class="info-box">
                   <i class="bx bx-map"></i>
                   <h3>Our Address</h3>
@@ -842,14 +842,14 @@
                   <p>P. O. BOX. 10102-80101</p>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6" data-aos='fade-left'>
                 <div class="info-box mt-4">
                   <i class="bx bx-envelope"></i>
                   <h3>Email Us</h3>
                   <p><a href="mailto:herosacademyshanzuaic@yahoo.com">herosacademyshanzuaic@yahoo.com</a></p>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6" data-aos='fade-up'>
                 <div class="info-box mt-4">
                   <i class="bx bx-phone-call"></i>
                   <h3>Call Us</h3>
@@ -892,22 +892,22 @@
     </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
-{% endblock %}
+  {% endblock %}
 
- {% if messages %}
-<div class="text-center text-uppercase">
-  {% for message in messages %}
-    {% if 'subscribe' in message.tags %}
-      <div class="alert alert-success alert-dismissible fade show" role="alert">
-        {{ message }}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-    {% endif %}
-  {% endfor %}
-</div>
-{% endif %}
+  {% if messages %}
+  <div class="text-center text-uppercase">
+    {% for message in messages %}
+      {% if 'subscribe' in message.tags %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  {% endif %}
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="footer-top">
@@ -1003,17 +1003,15 @@
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-<script>
-    var swiper = new Swiper('.grade-slider', {
-        loop: true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
-    });
-</script>
-
-
+  <script>
+      var swiper = new Swiper('.grade-slider', {
+          loop: true,
+          autoplay: {
+              delay: 2500,
+              disableOnInteraction: false,
+          },
+      });
+  </script>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
