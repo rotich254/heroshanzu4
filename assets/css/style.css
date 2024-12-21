@@ -2372,3 +2372,22 @@ button[type="submit"]:hover {
     font-size: 27px;
   }
 }
+
+.donation-header {
+  background-color: #27ae60;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.paybill-info {
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+.paybill-info span {
+  font-weight: bold;
+  color: #000;
+}
+
