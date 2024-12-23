@@ -551,7 +551,7 @@
             <div class="swiper-slide"><a class="gallery-lightbox" href="{% static 'img/media/image6.png'%}"><img src="{% static 'img/media/image6.png'%}" class="img-fluid" alt=""></a></div>
             <div class="swiper-slide"><a class="gallery-lightbox" href="{% static 'img/media/image60.png'%}"><img src="{% static 'img/media/image60.png'%}" class="img-fluid" alt=""></a></div>
             <div class="swiper-slide"><a class="gallery-lightbox" href="{% static 'img/pic1.jpg'%}"><img src="{% static 'img/pic1.jpg'%}" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="gallery-lightbox" href="{% static 'img/image9.jpg'%}"><img src="{% static 'img/image9.jpg'%}" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="gallery-lightbox" href="{% static 'img/image9.webp'%}"><img src="{% static 'img/image9.webp'%}" class="img-fluid" alt=""></a></div>
             <div class="swiper-slide"><a class="gallery-lightbox" href="{% static 'img/media/image7.png'%}"><img src="{% static 'img/media/image7.png'%}" class="img-fluid" alt=""></a></div>
           </div>
           <div class="swiper-pagination"></div>
@@ -577,55 +577,55 @@
           </div>
 
           <div class="row donation-container">
+            <div class="row">
+                  <div class="col-lg-6" >
+                    <div class="box" data-aos="fade-right" data-aos-delay="200">
+                      <h3>Donate Via PayPal</h3>
+                      <div>
+                          <img src="{% static 'img/paypal-donate-button-high-qualit.jpg'%}" alt="" class="img-fluid">
+                      </div>
+                      
+                      &nbsp; &nbsp;
+                              
+                      <div id="donate-button-container">
+                        <div id="donate-button"></div>
 
-            <div class="col-lg-6">
-              <div class="box" data-aos="fade-right" data-aos-delay="100">
-                <h3>Donate Via PayPal</h3>
-                
-                  <div id="donate-button-container">
-                    <div id="donate-button"></div>
-      
-                    <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
-                    <script>
-                      PayPal.Donation.Button({
-                        env:'production',
-                        hosted_button_id:'ZPWQGS4TDU2EN',
-                        image: {
+                        <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+                        <script>
+                        PayPal.Donation.Button({
+                          env:'production',
+                          hosted_button_id:'ZPWQGS4TDU2EN',
+                          image: {
                           src:'https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif',
                           alt:'Donate with PayPal button',
                           title:'PayPal - The safer, easier way to pay online!',
-                        }
-                      }).render('#donate-button');
-                    </script>
+                          }
+                        }).render('#donate-button');
+                        </script>
+                      </div>
+                    </div>
                   </div>
-              </div>
+            
+
+                  <div class='col'>
+                    <div class="box" data-aos="fade-left" data-aos-delay="200">
+                      <h3>Donate Via PayBill</h3>
+                      <img src="{% static 'img/lipanampesa.png' %}" class="img-fluid" alt="" >
+                    </div>
+                  </div>
             </div>
-
-<!-- 
-            <div class="col-lg-6">
-              <div class="box" data-aos="fade-left" data-aos-delay="100">
-                <h3>Donate Via Mpesa</h3>
-                <button class="btn btn-success" onclick="openMpesaModal()">Donate (Mpesa)</button>
-              </div>
-            </div> -->
-
-            <div class='col'>
-              <div class="box" data-aos="fade-left" data-aos-delay="200">
-                <h3>Donate Via PayBill</h3>
-                <img src="{% static 'img/lipanampesa.png' %}" class="img-fluid" alt="" >
-              </div>
-            </div>
-
           </div>
 
 
-          <br>          
+          <br>   
+          <hr>       
           
-          <div class="col-lg-8 donations-list">
-            <span>For any more information about our donations, Contact Us Here: <a href="mailto:herosacademyshanzuaic@yahoo.com">herosacademyshanzuaic@yahoo.com</a></span>
+          <div class="col donations-list">
             <p>
-              We also accept donations in the form of:
-              <ul>
+              <span>For any more information about our donations, Contact Us Here: <a href="mailto:herosacademyshanzuaic@yahoo.com">herosacademyshanzuaic@yahoo.com</a></span>
+            <br>
+             <span>We also accept donations in the form of:</span> 
+              <ul class="list-group">
                   <li><i class="bi bi-check2-all"></i>Stationery</li>
                   <li><i class="bi bi-check2-all"></i>Food</li>
                   <li><i class="bi bi-check2-all"></i>Games Attires (e.g., Kits and Balls)</li>
@@ -635,7 +635,7 @@
             </p>
           </div>
     
-          <div class="modal fade" id="mpesaModal" tabindex="-1" role="dialog" aria-labelledby="mpesaModalLabel" aria-hidden="true">
+          <!-- <div class="modal fade" id="mpesaModal" tabindex="-1" role="dialog" aria-labelledby="mpesaModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -658,7 +658,7 @@
                     </div>
                 </div>
             </div>
-          </div>
+          </div> -->
         
         </div>
       </div>
