@@ -46,7 +46,7 @@ class Admission(models.Model):
         ('male','Male'),
         ('female', 'Female')
     ]
-    nemis= models.IntegerField()
+    learner_upi= models.CharField(max_length=50)
     name= models.CharField(max_length=40)
     middle_name= models.CharField(max_length=40)
     surname= models.CharField(max_length=40)
