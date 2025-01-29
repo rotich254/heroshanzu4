@@ -198,7 +198,7 @@ def make_application(request):
             subject2,
             body2,
             settings.EMAIL_HOST_USER,
-            [settings.EMAIL_HOST_USER],
+            ['herosacademyshanzuaic@yahoo.com'],
         )
         
         try:
@@ -267,3 +267,6 @@ def school(request):
 
 def staff(request):
     return render(request, 'gallery/staff.html')
+
+def custom_404(request,exception=None):
+    return render(request, 'gallery/404.html', status=404)
