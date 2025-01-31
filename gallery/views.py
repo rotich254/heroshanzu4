@@ -122,7 +122,7 @@ def image_gallery(request):
 
 def make_application(request):
     if request.method == 'POST':
-        nemis=request.POST.get('nemis')
+        learner_upi=request.POST.get('learner_upi')
         name=request.POST.get('name')
         middle_name = request.POST.get('middle_name')
         surname = request.POST.get('surname')
@@ -138,7 +138,7 @@ def make_application(request):
         parent_residence=request.POST.get('parent_residence')
         
         Admission.objects.create(
-            nemis=nemis,
+            learner_upi=learner_upi,
             name=name,
             middle_name=middle_name,
             surname=surname,
@@ -160,7 +160,7 @@ def make_application(request):
             f'We have received your application for the student, {name} {middle_name} {surname}.\n\n'
             f'Below are the details provided in the application:\n'
             f'- Student Name: {name} {middle_name} {surname}\n'
-            f'- Nemis: {nemis}\n'
+            f'- Learner UPI: {learner_upi}\n'
             f'- Date of Birth: {date_of_birth}\n'
             f'- Gender: {gender}\n'
             f'- Grade Level: {grade_level}\n'
@@ -177,8 +177,33 @@ def make_application(request):
             [parent_email],            
         )       
         
+        subject2 = f'Student Application Made Through Website'
+        body2 = (
+            f'Student Name: {name} {middle_name} {surname}\n\n'
+            f'Learners UPI: {learner_upi}\n'
+            f'Date Of Birth: {date_of_birth}\n'   
+            f'Gender: {gender}\n'
+            f'Grade Level: {grade_level}\n'
+            f'Current School: {current_school}\n'
+            f'Where He/She Heard About Us: {about_us}\n\n\n'
+            f'Parent Name: {parent_name}\n'
+            f'Parent Email: {parent_email}\n'
+            f'Parent Phone: {parent_phone}\n'
+            f'Parent Relation: {parent_relation}\n'
+            f'Parent Residence: {parent_residence}\n'
+               
+        )
+        
+        emailmessage2 =EmailMessage (
+            subject2,
+            body2,
+            settings.EMAIL_HOST_USER,
+            ['herosacademyshanzuaic@yahoo.com'],
+        )
+        
         try:
             emailmessage.send()
+            emailmessage2.send()
             messages.success(request, 'Your Application Has Been Successful. We will contact you after review. Thank You')    
         except Exception as e:
             messages.error(request, f'Application error : {e}')
@@ -242,3 +267,6 @@ def school(request):
 
 def staff(request):
     return render(request, 'gallery/staff.html')
+
+def custom_404(request,exception=None):
+    return render(request, 'gallery/404.html', status=404)
